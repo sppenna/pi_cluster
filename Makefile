@@ -19,3 +19,9 @@ send-path:
 
 update-HiBench:
 	cp -r benchmark_cfgs/* ./HiBench/conf/
+
+run-tests:
+	./sbin/monitor-cluster.sh
+
+clean-results:
+	rm ./results/*
