@@ -1,3 +1,4 @@
+
 decommission:
 	/opt/hadoop/sbin/stop-yarn.sh
 	/opt/hadoop/sbin/stop-dfs.sh
@@ -17,11 +18,14 @@ conf-spark:
 send-path:
 	./sbin/sendBashrc.sh
 
+build-HiBench:
+	mvn -f /home/pi/pi_cluster/HiBench/ -Phadoopbench -Psparkbench -Dspark=2.1 -Dscala=2.11 clean package
+
 update-HiBench:
 	cp -r benchmark_cfgs/* ./HiBench/conf/
 
 run-tests:
-	./sbin/monitor-cluster.sh
+	./sbin/monitor-cluster.sh VAR1=$(VAR1)
 
 clean-results:
 	rm ./results/*
