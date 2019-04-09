@@ -2,7 +2,11 @@
 <configuration>
 
 <!-- Site specific YARN configuration properties -->
-  	<property>
+	<property>
+		<name>yarn.resourcemanager.hostname</name>
+		<value>node-master</value>
+	</property>
+	<property>
     		<name>yarn.nodemanager.aux-services</name>
     		<value>mapreduce_shuffle</value>
   	</property>
@@ -12,7 +16,7 @@
   	</property>
   	<property>
   	 	<name>yarn.nodemanager.resource.memory-mb</name>
-    		<value>1024</value>
+		<value>500</value>
  	</property>
   	<property>
     		<name>yarn.scheduler.minimum-allocation-mb</name>
@@ -20,7 +24,7 @@
   	</property>
   	<property>
     		<name>yarn.scheduler.maximum-allocation-mb</name>
-    		<value>1024</value>
+    		<value>500</value>
   	</property>
   	<property>
     		<name>yarn.scheduler.minimum-allocation-vcores</name>

@@ -2,8 +2,9 @@
 hibench.spark.home      /PATH/TO/YOUR/SPARK/HOME
 
 # Spark master
-#   standalone mode: spark://xxx:7077
-#   YARN mode: yarn-client
+#   standalone mode: `spark://xxx:7077`
+#   YARN mode: `yarn-client`
+#   unset: fallback to `local[1]`
 hibench.spark.master    yarn-client
 
 # executor number and cores when running on Yarn
@@ -18,7 +19,8 @@ spark.driver.memory    4g
 spark.default.parallelism     ${hibench.default.map.parallelism}
 
 # set spark sql's default shuffle partitions according to hibench's parallelism value
-spark.sql.shuffle.partitions  ${hibench.default.shuffle.parallelism}
+spark.sql.shuffle.partitions  ${hibench.default.map.parallelism}
+
 
 #======================================================
 # Spark Streaming

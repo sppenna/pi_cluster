@@ -36,7 +36,7 @@
 # - HADOOP_CONF_DIR, to point Spark towards Hadoop configuration files
 HADOOP_CONF_DIR=/opt/hadoop/etc/hadoop
 # - SPARK_EXECUTOR_CORES, Number of cores for the executors (Default: 1).
-SPARK_EXECUTOR_CORES=4
+SPARK_EXECUTOR_CORES=1
 # - SPARK_EXECUTOR_MEMORY, Memory per Executor (e.g. 1000M, 2G) (Default: 1G)
 SPARK_EXECUTOR_MEMORY=256m
 # - SPARK_DRIVER_MEMORY, Memory for Driver (e.g. 1000M, 2G) (Default: 1G)

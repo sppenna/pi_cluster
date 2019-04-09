@@ -14,6 +14,10 @@
 -->
 <configuration>
 	<property>
+		<name>yarn.resourcemanager.hostname</name>
+		<value>node-master</value>
+	</property>
+	<property>
 		<name>yarn.resourcemanager.resource-tracker.address</name>
 		<value>node-master:8025</value>
 	</property>
