@@ -16,7 +16,7 @@ send-path:
 	./sbin/sendBashrc.sh
 
 build-HiBench:
-	mvn -f /home/pi/pi_cluster/HiBench/ -Phadoopbench -Psparkbench -Dspark=2.1 -Dscala=2.11 clean package
+	mvn -f /home/pi/pi_cluster/HiBench/ -Phadoopbench -Dspark=2.2 -Dscala=2.11 clean package
 
 copy-HiBench:
 	cp -r benchmark_cfgs/* ./HiBench/conf/
@@ -24,6 +24,8 @@ copy-HiBench:
 prepare-kmeans:
 	./HiBench/bin/workloads/ml/kmeans/prepare/prepare.sh
 
-run-tests:
-	./sbin/monitor-cluster.sh VAR1=$(VAR1)
+ganglia-start:
+	/home/pi/pi_cluster/sbin/startGanglia.sh
 
+ganglia-stop:
+	/home/pi/pi_cluster/sbin/stopGanglia.sh
