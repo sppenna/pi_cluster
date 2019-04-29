@@ -29,3 +29,6 @@ ganglia-start:
 
 ganglia-stop:
 	/home/pi/pi_cluster/sbin/stopGanglia.sh
+
+run-cluster-monitor:
+	python cluster_monitor.py
